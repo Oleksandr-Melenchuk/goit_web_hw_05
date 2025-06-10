@@ -57,8 +57,8 @@ async def main():
         tasks = [parse_data(session, f'{base_url}{day}', day) for day in dates]
         result = await asyncio.gather(*tasks)
 
-        for item in result:
-            print(item)
+        result_list = [result for result in results]
+        print(result_list)
 
 
 if __name__ == '__main__':
